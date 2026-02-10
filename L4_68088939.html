@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - My Gallery</title>
+    <style>
+        /* ส่วนของการตกแต่ง (CSS) */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* ทำให้รูปไม่เบี้ยว */
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05); /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Photo Gallery</h1>
+    <p>Assignment 4: แก้ไขรูปภาพใน Gallery ทั้งหมด</p>
+
+    <div class="gallery-container">
+        <img class="gallery-item" src="https://picsum.photos/id/10/400/300" alt="รูปที่ 1">
+        <img class="gallery-item" src="https://picsum.photos/id/20/400/300" alt="รูปที่ 2">
+        <img class="gallery-item" src="https://picsum.photos/id/30/400/300" alt="รูปที่ 3">
+        <img class="gallery-item" src="https://picsum.photos/id/40/400/300" alt="รูปที่ 4">
+        <img class="gallery-item" src="https://picsum.photos/id/50/400/300" alt="รูปที่ 5">
+        <img class="gallery-item" src="https://picsum.photos/id/60/400/300" alt="รูปที่ 6">
+    </div>
+
+</body>
+</html>
